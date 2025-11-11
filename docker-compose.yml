@@ -1,0 +1,31 @@
+services:
+  #web:
+  #  image: nginx
+  #  ports:
+  #    - 80:80
+  #  volumes:
+  #    - .:/usr/share/nginx/html
+
+  web:
+    build: .
+    ports:
+      - 8000:80
+    env_file: ".env"
+    environment:
+      MONGO_USER: ${USUARIO_MONGO}
+      MONGO_PASSWORD: ${CONTRASENA_MONGO}
+      MONGOHOST: db
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
+    env_file: ".env"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${USUARIO_MONGO}
+      MONGO_INITDB_ROOT_PASSWORD: ${CONTRASENA_MONGO}
+      MONGO_INITDB_DATABASE: mydatabase
+    volumes:
+      - ./db:/data/db

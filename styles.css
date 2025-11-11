@@ -1,0 +1,85 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+/* Clase para el contenedor principal*/
+.container {
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+}
+
+/* Estilo para el título*/
+h1 {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+/* Estilos para el formulario*/
+form {
+    display: flex; /* Flexbox para alinear elementos. */
+    flex-direction: column; /* Elementos uno debajo del otro. */
+}
+
+/* Estilos para labels*/
+label {
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+
+/* Estilos para inputs*/
+input {
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    transition: border-color 0.3s; /* Transición para el borde */
+}
+
+/* Cambio de borde del input. */
+input:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+/* Estilo específico para el botón de submit */
+input[type="submit"] {
+    margin-top: 20px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+/* Cambio de color al hover en el botón. */
+input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+/* Estilo para párrafos y enlaces*/
+p {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+/* Estilo para enlaces*/
+a {
+    color: #007bff; 
+    text-decoration: none; 
+}
+
+/* Subrayado al hover en enlaces */
+a:hover {
+    text-decoration: underline; 
+}
